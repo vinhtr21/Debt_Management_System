@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Debt_Management"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Label/>
+        Title="MainWindow" Height="300" Width="400">
+    <Grid Background="AliceBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lbLogin" Content="Welcome" FontSize="30" HorizontalAlignment="Center" Margin="0,20,0,10" Grid.Row="0" Grid.Column="1" RenderTransformOrigin="0.018,0.542"/>
+        <Label Content="Username" Grid.Row="1" HorizontalAlignment="Right"/>
+        <TextBox x:Name="txtUsername" Grid.Row="1" Grid.Column="1" Margin="0,5,-40,5"/>
+        <Label Content="Password" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right"/>
+        <PasswordBox x:Name="txtPassword" Grid.Row="2" Grid.Column="1" Margin="0,5,-40,5"/>
+        <Button x:Name="btnLogin" Content="Login" Grid.Row="3" Margin="0,5,48,0" Grid.Column="1" Click="btnLogin_Click"/>
     </Grid>
 </Window>
