@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 D:\FPT University\FALL_2023\PRN221\Project\Debt_Management\Debt_Management_System\App.xaml
-11407045341
+4-2121362776
 
-91639935820
+12-724779847
 232-869857873
-MainWindow.xaml;
+Views\AdminInfor.xaml;Views\MainWindow.xaml;Views\MenuWindow.xaml;Views\UserInfo.xaml;
 
 False
 
