@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Debt_Management.Views"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="MenuWindow" Height="300" Width="300">
     <Grid VerticalAlignment="Center">
         <Grid.RowDefinitions>
@@ -18,12 +19,12 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Label Content="MENU" Grid.Row="0" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold" />
-        <Button x:Name="btnDashBoard" Content="Dashboard (Admin Only)" Grid.Row ="1" Width="200" Margin="5"/>
-        <Button x:Name="btnMember" Content="View Member (Admin Only)" Grid.Row ="2" Width="200" Margin="5"/>
+        <Button x:Name="btnDashBoard" Content="Dashboard (Admin Only)" Grid.Row ="1" Width="200" Margin="5" Click="btnDashBoard_Click"/>
+        <Button x:Name="btnMember" Content="View Member (Admin Only)" Grid.Row ="2" Width="200" Margin="5" Click="btnMember_Click"/>
         <Button x:Name="btnViewInfo" Content="View Info" Grid.Row ="3" Width="200" Margin="5" Click="btnViewInfo_Click"/>
-        <Button x:Name="btnRequire" Content="New Require" Grid.Row ="4" Width="200" Margin="5"/>
+        <Button x:Name="btnRequire" Content="New Require" Grid.Row ="4" Width="200" Margin="5" Click="btnRequire_Click"/>
         <Button x:Name="btnPayment" Content="Payment" Grid.Row ="5" Width="200" Margin="5"/>
         <Button x:Name="btnSMS" Content="Send SMS" Grid.Row ="6" Width="200" Margin="5"/>
-        <Button x:Name="btnViewProduct" Content="Product (Admin Only)" Grid.Row ="7"  Width="200" Margin="5"/>
+        <Button x:Name="btnViewProduct" Content="Product (Admin Only)" Grid.Row ="7"  Width="200" Margin="5" Click="btnViewProduct_Click"/>
     </Grid>
 </Window>

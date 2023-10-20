@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 D:\FPT University\FALL_2023\PRN221\Project\Debt_Management\Debt_Management_System\App.xaml
-4-2121362776
+9531611276
 
-141262862357
+22-1794640122
 232-869857873
-Views\AdminInfor.xaml;Views\MainWindow.xaml;Views\MenuWindow.xaml;Views\UserInfo.xaml;
+Views\AdminInfor.xaml;Views\AdminRequireWindow.xaml;Views\DashboardView.xaml;Views\MainWindow.xaml;Views\MenuWindow.xaml;Views\UserInfo.xaml;Views\UserRequire.xaml;Views\ViewAllMember.xaml;Views\ViewProducts.xaml;
 
-True
+False
 

@@ -1,0 +1,27 @@
+﻿<Window x:Class="Debt_Management.Views.ViewAllMember"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Debt_Management.Views"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="ViewAllMember" Height="450" Width="900">
+    <Grid>
+        <Label Content="List Members" HorizontalAlignment="Center" Margin="0,10,0,0" FontSize="16" FontWeight="Bold" Height="32" VerticalAlignment="Top"/>
+        <Button x:Name="btnBack" Content="Back" Margin="0,10,64,0" Click="btnBack_Click" Height="18" VerticalAlignment="Top" HorizontalAlignment="Right" Width="105" />
+        <ListView x:Name="listMembers" Width="auto" Height="auto" Margin="0,82,0,-45">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" Width="20" DisplayMemberBinding="{Binding Path=Id}"/>
+                    <GridViewColumn Header="Full Name" Width="100" DisplayMemberBinding="{Binding Path=Name}"/>
+                    <GridViewColumn Header="Phone Number" Width="100" DisplayMemberBinding="{Binding Path=Phone}"/>
+                    <GridViewColumn Header="Address" Width="200" DisplayMemberBinding="{Binding Path=Address}"/>
+                    <GridViewColumn Header="Date of Birth" Width="200" DisplayMemberBinding="{Binding Path=Dob}"/>
+                    <GridViewColumn Header="Available" Width="100" DisplayMemberBinding="{Binding Path=Available}"/>
+                    <GridViewColumn Header="Debt" Width="100" DisplayMemberBinding="{Binding Path=Debt}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

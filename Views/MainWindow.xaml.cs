@@ -40,16 +40,17 @@ namespace Debt_Management
         {
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Password;
-            if(AdminCheck(username, password))
+            if (AdminCheck(username, password))
             {
-                isAdmin= true;
+                isAdmin = true;
                 MessageBox.Show("admin da dang nhap", "Login");
                 menu.Show();
                 this.Close();
-                
-            }else if(LoginMember(username, password))
+
+            }
+            else if (LoginMember(username, password))
             {
-                isAdmin= false;
+                isAdmin = false;
                 MessageBox.Show("dang nhap thanh cong", "Login");
                 menu.Show();
                 this.Close();
@@ -80,10 +81,10 @@ namespace Debt_Management
         {
             Account member = null;
             var members = AccountDAO.Instance.GetAccounts();
-            var auth = members.FirstOrDefault( 
-                member => !string.IsNullOrEmpty(member.Username) && 
-                !string.IsNullOrEmpty(member.Password) && 
-                member.Username.Equals(username) && 
+            var auth = members.FirstOrDefault(
+                member => !string.IsNullOrEmpty(member.Username) &&
+                !string.IsNullOrEmpty(member.Password) &&
+                member.Username.Equals(username) &&
                 member.Password.Equals(password));
             if (auth != null)
             {

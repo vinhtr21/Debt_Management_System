@@ -5,10 +5,25 @@
     <Compile Update="Views\AdminInfor.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\AdminRequireWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\DashboardView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\MenuWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\UserInfo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\UserRequire.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ViewAllMember.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ViewProducts.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -16,10 +31,25 @@
     <Page Update="Views\AdminInfor.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\AdminRequireWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DashboardView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\MenuWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\UserInfo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UserRequire.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ViewAllMember.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ViewProducts.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -18,8 +18,8 @@ namespace Debt_Management.Views
     /// </summary>
     public partial class MenuWindow : Window
     {
-        AdminInfor adminInfor = new AdminInfor();
-        UserInfo userInfo = new UserInfo();
+        
+        
         public MenuWindow()
         {
             InitializeComponent();
@@ -27,15 +27,76 @@ namespace Debt_Management.Views
 
         private void btnViewInfo_Click(object sender, RoutedEventArgs e)
         {
-            if(MainWindow.isAdmin == true)
+			AdminInfor adminInfor = new();
+			UserInfo userInfo = new();
+			if (MainWindow.isAdmin == true)
             {
+                this.Close();
                 adminInfor.Show();
             }
             else
             {
-                userInfo.Show();
+				this.Close();
+				userInfo.Show();
             }
-            this.Close();
         }
-    }
+
+		private void btnMember_Click(object sender, RoutedEventArgs e)
+		{
+            ViewAllMember view = new ViewAllMember();
+			if (MainWindow.isAdmin == true)
+			{
+				this.Close();
+				view.Show();
+            }
+            else
+            {
+                MessageBox.Show("chuc nang nay chi danh cho admin");
+            }
+		}
+
+		private void btnViewProduct_Click(object sender, RoutedEventArgs e)
+		{
+            ViewProducts view = new ViewProducts();
+			if (MainWindow.isAdmin == true)
+			{
+				this.Close();
+				view.Show();
+			}
+			else
+			{
+				MessageBox.Show("chuc nang nay chi danh cho admin");
+			}
+		}
+
+		private void btnDashBoard_Click(object sender, RoutedEventArgs e)
+		{
+			DashboardView view = new DashboardView();
+			if (MainWindow.isAdmin == true)
+			{
+				this.Close();
+				view.Show();
+			}
+			else
+			{
+				MessageBox.Show("chuc nang nay chi danh cho admin");
+			}
+		}
+
+		private void btnRequire_Click(object sender, RoutedEventArgs e)
+		{
+			AdminRequireWindow admin = new AdminRequireWindow();
+			UserRequire user = new UserRequire();
+			if (MainWindow.isAdmin == true)
+			{
+				this.Close();
+				admin.Show();
+			}
+			else
+			{
+				this.Close();
+				user.Show();
+			}
+		}
+	}
 }

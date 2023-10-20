@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Debt_Management.Views"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="UserInfo" Height="308" Width="300">
     <Grid>
         <Grid.RowDefinitions>
@@ -23,16 +24,14 @@
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
             <Label Content="USER INFORMATION" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left"/>
-            <Label Content="First Name: " Grid.Row="1"/>
-            <TextBox Text="" Grid.Row="1" Grid.Column="1" Margin="4 4 0 4" IsReadOnly="True"/>
-            <Label Content="Last Name: " Grid.Row="2"/>
-            <TextBox Text="" Grid.Row="2" Grid.Column="2" Margin="4 4 0 4" IsReadOnly="True"/>
+            <Label Content="Full Name: " Grid.Row="1"/>
+            <TextBox x:Name="txtName" Grid.Row="1" Grid.Column="1" Margin="4 4 0 4" IsReadOnly="True"/>
             <Label Content="Phone: " Grid.Row="3"/>
-            <TextBox Text="" Grid.Row="3" Grid.Column="1" Margin="4 4 0 4" IsReadOnly="True"/>
+            <TextBox x:Name="txtPhone"  Grid.Row="3" Grid.Column="1" Margin="4 4 0 4" IsReadOnly="True"/>
             <Label Content="Address: " Grid.Row="4"/>
-            <TextBox Text="" Grid.Row="4" Grid.Column="1" Margin="4 4 0 4" IsReadOnly="True"/>
+            <TextBox x:Name="txtAddress"  Grid.Row="4" Grid.Column="1" Margin="4 4 0 4" IsReadOnly="True"/>
             <Label Content="Date of Birth: " Grid.Row="5"/>
-            <TextBox Text="" Grid.Row="5" Grid.Column="1" Margin="4 4 0 4" IsReadOnly="True"/>
+            <TextBox x:Name="txtDob"  Grid.Row="5" Grid.Column="1" Margin="4 4 0 4" IsReadOnly="True"/>
             <Label Content="Available: " Grid.Row="6"/>
             <TextBox x:Name="txtAvailable" Grid.Row="6" Grid.Column="1" Margin="4 4 0 4" IsReadOnly="True"/>
             <Label Content="Debt: " Grid.Row="7"/>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Debt_Management.DAO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,15 +20,23 @@ namespace Debt_Management.Views
     /// </summary>
     public partial class AdminInfor : Window
     {
-        private MenuWindow menu;
-        public AdminInfor()
+		
+
+		public AdminInfor()
         {
             InitializeComponent();
+            LoadAvailable();
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
+		private void LoadAvailable()
+		{
+			txtAvailable.Text = AdminDAO.Instance.GetAdminInfor().Available.ToString();
+			txtDebt.Text = AdminDAO.Instance.GetAdminInfor().Debt.ToString();
+		}
+		private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+			MenuWindow menu = new MenuWindow();
+			this.Close();
             menu.Show();
         }
     }
