@@ -53,23 +53,17 @@ namespace Debt_Management.Views
 			}
 		}
 
-		private float getCost()
+
+		private int GetSupplierID(string name)
 		{
-			var productName = txtProductName.Text;
-			if(productName == "Grass")
-			{
-				return 10;
-			}else if(productName == "Bran")
-			{
-				return 20;
-			}
-			else
-			{
-				return 30;
-			}
+			return AccountDAO.Instance.GetIDbyName(name);
 		}
 
-		
+		private double? GetPrice(string name)
+		{
+			return ProductDAO.Instance.GetProductByName(name).Price;
+
+        }
 
 		private AdminRequire getInfo()
 		{
@@ -78,10 +72,10 @@ namespace Debt_Management.Views
 			{
 				require = new AdminRequire()
 				{
-					SupplierName = txtSupplierName.Text,
+					SupplierId = GetSupplierID(txtSupplierName.Text),
 					ProductName = txtProductName.Text,
 					Weight = float.Parse(txtWeight.Text),
-					Cost = getCost() * float.Parse(txtWeight.Text),
+					Cost = GetPrice(txtProductName.Text) * float.Parse(txtWeight.Text),
 					Date = DateTime.Now.ToString("dd-MM-yyyy"),
 					Status = "Pending",
 				};
@@ -111,6 +105,7 @@ namespace Debt_Management.Views
 			txtSupplierName.ItemsSource = AccountDAO.Instance.GetAccounts();
 			txtSupplierName.DisplayMemberPath = "Name";
 			txtSupplierName.SelectedValue = "Name";
+			txtSupplierName.SelectedIndex = 0;
 		}
 
 		private void btnBack_Click(object sender, RoutedEventArgs e)

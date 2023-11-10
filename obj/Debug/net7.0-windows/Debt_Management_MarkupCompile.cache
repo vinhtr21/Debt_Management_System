@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\FPT University\FALL_2023\PRN221\Project\Debt_Management\Debt_Management_System\obj\Debug\net7.0-windows\
+F:\FPT University\FALL_2023\PRN221\Project\Debt_Management\Debt_Management_System\obj\Debug\net7.0-windows\
 Debt_Management
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-D:\FPT University\FALL_2023\PRN221\Project\Debt_Management\Debt_Management_System\App.xaml
-9531611276
+F:\FPT University\FALL_2023\PRN221\Project\Debt_Management\Debt_Management_System\App.xaml
+16242494924
 
-20512684970
+29-1923359180
 232-869857873
-Views\AdminInfor.xaml;Views\AdminRequireWindow.xaml;Views\DashboardView.xaml;Views\MainWindow.xaml;Views\MenuWindow.xaml;Views\UserInfo.xaml;Views\UserRequire.xaml;Views\ViewAllMember.xaml;Views\ViewProducts.xaml;
+Views\AddProductWindow.xaml;Views\AdminInfor.xaml;Views\AdminRequireWindow.xaml;Views\AdminSendMsg.xaml;Views\DashboardView.xaml;Views\MainWindow.xaml;Views\MenuWindow.xaml;Views\PaymentAdminWindow.xaml;Views\UserEditInfo.xaml;Views\UserInfo.xaml;Views\UserReInputPassword.xaml;Views\UserSendMsg.xaml;Views\UserViewPaymentWindow.xaml;Views\UserViewRequire.xaml;Views\ViewAllMember.xaml;Views\ViewProducts.xaml;
 
 False
 

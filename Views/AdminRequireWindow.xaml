@@ -26,7 +26,7 @@
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Require ID" Width="60" DisplayMemberBinding="{Binding Path=RequireId}"/>
-                    <GridViewColumn Header="Supplier" Width="100" DisplayMemberBinding="{Binding Path= SupplierName}"/>
+                    <GridViewColumn Header="Supplier" Width="100" DisplayMemberBinding="{Binding Path= SupplierId}"/>
                     <GridViewColumn Header="Product" Width="100" DisplayMemberBinding="{Binding Path= ProductName}"/>
                     <GridViewColumn Header="Weight" Width="100" DisplayMemberBinding="{Binding Path= Weight}"/>
                     <GridViewColumn Header="Cost" Width="100" DisplayMemberBinding="{Binding Path=Cost}"/>

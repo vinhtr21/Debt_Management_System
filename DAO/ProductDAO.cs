@@ -42,5 +42,35 @@ namespace Debt_Management.DAO
 			}
 			return products;
 		}
-	}
+
+        public void AddProduct(Product product)
+        {
+            DebtCompanyContext myDB = new DebtCompanyContext();
+            try
+            {
+                myDB.Products.Add(product);
+                myDB.SaveChanges();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+		public Product GetProductByName(string name)
+		{
+            Product product = null;
+            try
+            {
+                var myDB = new DebtCompanyContext();
+                product = myDB.Products.SingleOrDefault(o => o.ProductName == name);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return product;
+        }
+    }
 }

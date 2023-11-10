@@ -43,7 +43,7 @@ namespace Debt_Management
             if (AdminCheck(username, password))
             {
                 isAdmin = true;
-                MessageBox.Show("admin da dang nhap", "Login");
+                MessageBox.Show("admin login successful", "Login");
                 menu.Show();
                 this.Close();
 
@@ -51,13 +51,14 @@ namespace Debt_Management
             else if (LoginMember(username, password))
             {
                 isAdmin = false;
-                MessageBox.Show("dang nhap thanh cong", "Login");
+                MessageBox.Show("login successful" +
+                    "", "Login");
                 menu.Show();
                 this.Close();
             }
             else
             {
-                MessageBox.Show("ngu nhu con cho", "Error");
+                MessageBox.Show("incorrect username or password", "Error");
             }
         }
 

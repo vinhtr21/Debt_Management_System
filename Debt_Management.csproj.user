@@ -2,10 +2,16 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="Views\AddProductWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\AdminInfor.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\AdminRequireWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AdminSendMsg.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\DashboardView.xaml.cs">
@@ -14,10 +20,25 @@
     <Compile Update="Views\MenuWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\PaymentAdminWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\UserEditInfo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\UserInfo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\UserRequire.xaml.cs">
+    <Compile Update="Views\UserReInputPassword.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\UserSendMsg.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\UserViewPaymentWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\UserViewRequire.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\ViewAllMember.xaml.cs">
@@ -28,10 +49,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Views\AddProductWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\AdminInfor.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\AdminRequireWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AdminSendMsg.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\DashboardView.xaml">
@@ -40,10 +67,25 @@
     <Page Update="Views\MenuWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\PaymentAdminWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UserEditInfo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\UserInfo.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\UserRequire.xaml">
+    <Page Update="Views\UserReInputPassword.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UserSendMsg.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UserViewPaymentWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UserViewRequire.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\ViewAllMember.xaml">

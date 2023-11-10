@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using Debt_Management.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace Debt_Management.DAO
 {
     public class AccountDAO
@@ -43,7 +45,24 @@ namespace Debt_Management.DAO
             return accounts;
         }
 
-        public Account GetAccountByID(int id)
+        public void UpdateAccount(Account account)
+        {
+            Account _acc = GetAccountByID(MainWindow.memberId);
+            if (_acc != null)
+            {
+                _acc.Name= account.Name;
+                _acc.Address= account.Address;
+                _acc.Phone= account.Phone;
+                _acc.Password= account.Password;
+                context.SaveChanges();
+            }
+            else
+            {
+                throw new Exception("error");
+            }
+        }
+
+        public Account GetAccountByID(int? id)
         {
             Account acc = null;
             try
@@ -57,6 +76,19 @@ namespace Debt_Management.DAO
             return acc;
         }
 
-
+        public int GetIDbyName(string name) 
+        {
+            Account acc = null;
+            int id = 0;
+            try
+            {
+                id = context.Accounts.Where(acc => acc.Name == name).FirstOrDefault().Id;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return id;
+        }
     }
 }

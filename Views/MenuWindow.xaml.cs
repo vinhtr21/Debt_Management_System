@@ -18,8 +18,8 @@ namespace Debt_Management.Views
     /// </summary>
     public partial class MenuWindow : Window
     {
-        
-        
+
+
         public MenuWindow()
         {
             InitializeComponent();
@@ -27,76 +27,124 @@ namespace Debt_Management.Views
 
         private void btnViewInfo_Click(object sender, RoutedEventArgs e)
         {
-			AdminInfor adminInfor = new();
-			UserInfo userInfo = new();
-			if (MainWindow.isAdmin == true)
+            
+            if (MainWindow.isAdmin == true)
             {
+                AdminInfor adminInfor = new();
                 this.Close();
                 adminInfor.Show();
             }
             else
             {
-				this.Close();
-				userInfo.Show();
+                UserInfo userInfo = new();
+
+                this.Close();
+                userInfo.Show();
             }
         }
 
-		private void btnMember_Click(object sender, RoutedEventArgs e)
-		{
-            ViewAllMember view = new ViewAllMember();
-			if (MainWindow.isAdmin == true)
-			{
-				this.Close();
-				view.Show();
+        private void btnMember_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainWindow.isAdmin == true)
+            {
+                ViewAllMember view = new ViewAllMember();
+
+                this.Close();
+                view.Show();
             }
             else
             {
                 MessageBox.Show("chuc nang nay chi danh cho admin");
             }
-		}
+        }
 
-		private void btnViewProduct_Click(object sender, RoutedEventArgs e)
-		{
-            ViewProducts view = new ViewProducts();
-			if (MainWindow.isAdmin == true)
-			{
-				this.Close();
-				view.Show();
-			}
-			else
-			{
-				MessageBox.Show("chuc nang nay chi danh cho admin");
-			}
-		}
+        private void btnViewProduct_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainWindow.isAdmin == true)
+            {
+                ViewProducts view = new ViewProducts();
 
-		private void btnDashBoard_Click(object sender, RoutedEventArgs e)
-		{
-			DashboardView view = new DashboardView();
-			if (MainWindow.isAdmin == true)
-			{
-				this.Close();
-				view.Show();
-			}
-			else
-			{
-				MessageBox.Show("chuc nang nay chi danh cho admin");
-			}
-		}
+                this.Close();
+                view.Show();
+            }
+            else
+            {
+                MessageBox.Show("chuc nang nay chi danh cho admin");
+            }
+        }
 
-		private void btnRequire_Click(object sender, RoutedEventArgs e)
-		{
-			AdminRequireWindow admin = new AdminRequireWindow();
-			UserRequire user = new UserRequire();
-			if (MainWindow.isAdmin == true)
-			{
-				this.Close();
-				admin.Show();
-			}
-			else
-			{
-				this.Close();
-				user.Show();
-			}
-		}
-	}
+        private void btnDashBoard_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainWindow.isAdmin == true)
+            {
+                DashboardView view = new DashboardView();
+
+                this.Close();
+                view.Show();
+            }
+            else
+            {
+                MessageBox.Show("chuc nang nay chi danh cho admin");
+            }
+        }
+
+        private void btnRequire_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainWindow.isAdmin == true)
+            {
+                AdminRequireWindow admin = new AdminRequireWindow();
+
+                this.Close();
+                admin.Show();
+            }
+            else
+            {
+                UserViewRequire user = new UserViewRequire();
+
+                this.Close();
+                user.Show();
+            }
+        }
+
+        private void btnPayment_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainWindow.isAdmin == true)
+            {
+                PaymentAdminWindow admin = new PaymentAdminWindow();
+                this.Close();
+                admin.Show();
+            }
+            else
+            {
+                UserViewPaymentWindow user = new UserViewPaymentWindow();
+                this.Close();
+                user.Show();
+            }
+        }
+
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.isAdmin = false;
+            MainWindow.memberId = 0;
+            MainWindow login = new MainWindow();
+            login.Show();
+            this.Close();
+        }
+
+        private void btnSMS_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainWindow.isAdmin == true)
+            {
+                AdminSendMsg admin = new AdminSendMsg();
+                this.Close();
+                admin.Show();
+            }
+            else
+            {
+                UserSendMsg user = new UserSendMsg();
+                this.Close();
+                user.Show();
+            }
+        }
+    }
 }

@@ -1,0 +1,40 @@
+﻿<Window x:Class="Debt_Management.Views.UserViewPaymentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Debt_Management.Views"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="UserViewPaymentWindow" Height="450" Width="700">
+    <Grid>
+        <Label Content="View Payments" Margin="0,10,0,0" FontSize="20" Height="40" VerticalAlignment="Top" HorizontalAlignment="Center" Width="133"/>
+        <Label Content="Available: " Height="25" Width="100" Margin="25,53,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <TextBox x:Name="txtAvailable" Width="200" Height="25" Margin="94,53,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" IsReadOnly="True"/>
+        <Label Content="Debt: " Height="25" Width="100" Margin="25,83,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <TextBox x:Name="txtDebt" Width="200" Height="25" Margin="94,83,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" IsReadOnly="True"/>
+        <Button x:Name="btnBack" Content="Back" Click="btnBack_Click" Margin="0,61,21,0" HorizontalAlignment="Right" Width="113" Height="34" VerticalAlignment="Top"/>
+        <ListView x:Name="listRequireUser" Width="auto" Margin="0,145,0,0" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Require ID" Width="auto" DisplayMemberBinding="{Binding Path=RequireId}"/>
+                    <GridViewColumn Header="Product" Width="auto" DisplayMemberBinding="{Binding Path= ProductName}"/>
+                    <GridViewColumn Header="Weight" Width="auto" DisplayMemberBinding="{Binding Path= Weight}"/>
+                    <GridViewColumn Header="Cost" Width="auto" DisplayMemberBinding="{Binding Path=Cost}"/>
+                    <GridViewColumn Header="Require Date" Width="auto" DisplayMemberBinding="{Binding Path=Date}"/>
+                    <GridViewColumn Header="Status" Width="auto" DisplayMemberBinding="{Binding Path=Status}"/>
+                    <!--<GridViewColumn Width="100">-->
+                        <!--<GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button x:Name="btnAccept" Content="Accept" Click="btnAccept_Click" Loaded="btnAccept_Loaded" Margin="0 0 5 0"/>
+                                    <Button x:Name="btnReject" Content="Reject" Click="btnReject_Click" Loaded="btnReject_Loaded"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>-->
+                    <!--</GridViewColumn>-->
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

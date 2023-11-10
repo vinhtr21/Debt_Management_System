@@ -36,6 +36,7 @@
             <TextBox x:Name="txtAvailable" Grid.Row="6" Grid.Column="1" Margin="4 4 0 4" IsReadOnly="True"/>
             <Label Content="Debt: " Grid.Row="7"/>
             <TextBox x:Name="txtDebt" Grid.Row="7" Grid.Column="1" Margin="4 4 0 4" IsReadOnly="True"/>
-            <Button x:Name="btnBack" Content="Back" Grid.Row="8" Grid.Column="1" Margin="4 4 0 4" Width="40" Click="btnBack_Click"/>
+            <Button x:Name="btnBack" Content="Back" Grid.Row="8" Grid.Column="1" Margin="4,4,76,4" Width="40" Click="btnBack_Click"/>
+            <Button x:Name="btnEditInfo" Content="Edit Info" Grid.Row="8" Grid.Column="1" Margin="67,4,0,4" Click="btnEditInfo_Click"/>
     </Grid>
 </Window>

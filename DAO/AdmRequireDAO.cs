@@ -1,4 +1,5 @@
 ﻿using Debt_Management.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -58,7 +59,51 @@ namespace Debt_Management.DAO
 			{
 				throw new Exception(ex.Message);
 			}
-
 		}
+        public AdminRequire GetReqByID(int ID)
+        {
+			AdminRequire req = null;
+            try
+            {
+                var myDB = new DebtCompanyContext();
+                req = myDB.AdminRequires.SingleOrDefault(o => o.RequireId == ID);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return req;
+        }
+		public IEnumerable<AdminRequire> GetReqBySupplierID(int ID)
+        {
+			List<AdminRequire> req = null;
+            try
+            {
+                var myDB = new DebtCompanyContext();
+                req = myDB.AdminRequires.Where(r => r.SupplierId == ID).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return req;
+        }
+
+        public void UpdateRequire(AdminRequire require)
+		{
+			DebtCompanyContext myDB = new DebtCompanyContext();
+			AdminRequire _req = GetReqByID(require.RequireId);
+			if(_req != null)
+			{
+                myDB.Entry<AdminRequire>(require).State = EntityState.Modified;
+                myDB.SaveChanges();
+			}
+			else
+			{
+				throw new Exception("error");
+			}
+        }
+
+
 	}
 }

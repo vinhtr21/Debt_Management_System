@@ -16,13 +16,16 @@ create table Product(
 )
 
 create table Admin(
+	ID int primary key,
 	Username varchar(45) not null,
 	Password varchar(45) not null,
+	Available float,
+	Debt float,
 )
 
 create table AdminRequire(
 	RequireId int primary key identity(1,1) not null,
-	SupplierName nvarchar(45),
+	SupplierId int,
 	ProductName nvarchar(45),
 	Weight float,
 	Cost float,
@@ -30,6 +33,15 @@ create table AdminRequire(
 	Status int,
 )
 
+create table Messages(
+	MsgId int primary key not null,
+	SenderId int,
+	ReceiverId int,
+	Content nvarchar(max),
+	SentDate datetime,
+)
+
+insert into Admin (ID, Username, Password, Available, Debt) values (1, 'admin', 'admin', 100000, -100000)
 
 insert into Account(Username, Password, Name, Address, Phone, DOB) values
 ('a', 'a','Vinh Tran','viet tri', '0912181156', '2002-01-21'),
@@ -41,9 +53,9 @@ insert into Product(ProductName, Price, Weight) values
 ('Bran', 20, 1),
 ('Corn', 30, 1)
 
-insert into AdminRequire(SupplierName, ProductName, Weight, Cost, Date, Status) values
-('Vinh Tran', 'Grass', 100,100 * 10, '2023-10-20', 'Pending'),
-('hong Tran', 'Bran', 200,200 * 20, '2023-10-20', 'Accepted'),
+insert into AdminRequire(SupplierId, ProductName, Weight, Cost, Date, Status) values
+(1, 'Grass', 100,100 * 10, '2023-10-20', 'Pending'),
+(2, 'Bran', 200,200 * 20, '2023-10-20', 'Accepted'),
 ('ha Tran', 'Corn', 300,300 * 30, '2023-10-20', 'Pending')
 
 DBCC CHECKIDENT(Account, RESEED, 0)
@@ -54,6 +66,7 @@ delete from AdminRequire
 
 drop table Account
 drop table AdminRequire
+drop table Admin
 
 
 ALTER TABLE Account ADD Available FLOAT;

@@ -21,6 +21,8 @@ public partial class DebtCompanyContext : DbContext
 
     public virtual DbSet<AdminRequire> AdminRequires { get; set; }
 
+    public virtual DbSet<Message> Messages { get; set; }
+
     public virtual DbSet<Product> Products { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -31,7 +33,7 @@ public partial class DebtCompanyContext : DbContext
     {
         modelBuilder.Entity<Account>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Account__3214EC27F760B86C");
+            entity.HasKey(e => e.Id).HasName("PK__Account__3214EC2799F365F6");
 
             entity.ToTable("Account");
 
@@ -54,10 +56,13 @@ public partial class DebtCompanyContext : DbContext
 
         modelBuilder.Entity<Admin>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("Admin");
+            entity.HasKey(e => e.Id).HasName("PK__Admin__3214EC27C6A19974");
 
+            entity.ToTable("Admin");
+
+            entity.Property(e => e.Id)
+                .ValueGeneratedNever()
+                .HasColumnName("ID");
             entity.Property(e => e.Password)
                 .HasMaxLength(45)
                 .IsUnicode(false);
@@ -68,7 +73,7 @@ public partial class DebtCompanyContext : DbContext
 
         modelBuilder.Entity<AdminRequire>(entity =>
         {
-            entity.HasKey(e => e.RequireId).HasName("PK__AdminReq__011D97B2390F856F");
+            entity.HasKey(e => e.RequireId).HasName("PK__AdminReq__011D97B22490785C");
 
             entity.ToTable("AdminRequire");
 
@@ -79,12 +84,19 @@ public partial class DebtCompanyContext : DbContext
             entity.Property(e => e.Status)
                 .HasMaxLength(20)
                 .IsUnicode(false);
-            entity.Property(e => e.SupplierName).HasMaxLength(45);
+        });
+
+        modelBuilder.Entity<Message>(entity =>
+        {
+            entity.HasKey(e => e.MsgId).HasName("PK__Messages__66235872D1EC9896");
+
+            entity.Property(e => e.MsgId).ValueGeneratedNever();
+            entity.Property(e => e.SendDate).HasColumnType("datetime");
         });
 
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Product__3214EC2784D2011A");
+            entity.HasKey(e => e.Id).HasName("PK__Product__3214EC27FCC70672");
 
             entity.ToTable("Product");
 

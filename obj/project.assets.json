@@ -3178,11 +3178,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FPT University\\FALL_2023\\PRN221\\Project\\Debt_Management\\Debt_Management_System\\Debt_Management.csproj",
+      "projectUniqueName": "F:\\FPT University\\FALL_2023\\PRN221\\Project\\Debt_Management\\Debt_Management_System\\Debt_Management.csproj",
       "projectName": "Debt_Management",
-      "projectPath": "D:\\FPT University\\FALL_2023\\PRN221\\Project\\Debt_Management\\Debt_Management_System\\Debt_Management.csproj",
+      "projectPath": "F:\\FPT University\\FALL_2023\\PRN221\\Project\\Debt_Management\\Debt_Management_System\\Debt_Management.csproj",
       "packagesPath": "C:\\Users\\TRAN DINH VINH\\.nuget\\packages\\",
-      "outputPath": "D:\\FPT University\\FALL_2023\\PRN221\\Project\\Debt_Management\\Debt_Management_System\\obj\\",
+      "outputPath": "F:\\FPT University\\FALL_2023\\PRN221\\Project\\Debt_Management\\Debt_Management_System\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\TRAN DINH VINH\\AppData\\Roaming\\NuGet\\NuGet.Config",

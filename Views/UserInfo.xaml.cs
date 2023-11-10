@@ -61,5 +61,11 @@ namespace Debt_Management.Views
 			}
 
 		}
-	}
+
+        private void btnEditInfo_Click(object sender, RoutedEventArgs e)
+        {
+			UserReInputPassword user = new UserReInputPassword();
+			user.Show();
+        }
+    }
 }
